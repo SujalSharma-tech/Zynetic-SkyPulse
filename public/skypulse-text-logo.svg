@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100">
+  <!-- Text Logo -->
+  <text x="150" y="60" font-family="Arial, sans-serif" font-size="45" font-weight="bold" text-anchor="middle" fill="#2B87D1">Sky<tspan fill="#FF8800">Pulse</tspan></text>
+  
+  <!-- Small Pulse Line Accent -->
+  <path d="M177 70 L187 70 L192 65 L197 75 L202 70 L212 70" 
+        stroke="#FF8800" stroke-width="3" fill="none" />
+</svg>
