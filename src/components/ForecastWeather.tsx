@@ -35,6 +35,7 @@ const ForecastWeather = ({ data }: { data: ForecastData }) => {
         humidity: forecast.main.humidity,
         wind: forecast.wind.speed,
         weather: forecast.weather[0],
+
         date: forecast.dt,
       };
     } else {
@@ -49,22 +50,23 @@ const ForecastWeather = ({ data }: { data: ForecastData }) => {
   return (
     <div className="">
       <h2 className="text-3xl font-bold p-5 pt-0">5 Days Forecast</h2>
-      <div className="flex gap-1  md:gap-3 flex-wrap ">
+      <div className="flex gap-2  md:gap-3 flex-wrap ">
         {nextDays.map((weekday, indx) => {
           return (
             <Card
-              className="flex flex-col items-center w-[100px] py-1 h-fit"
+              className="flex flex-row w-full lg:flex-col items-center lg:w-fit py-1 h-fit"
               key={indx}
             >
               <CardHeader>
                 {format(new Date(weekday.date * 1000), "EEE")}
               </CardHeader>
               <CardContent>
-                <div>
+                <div className="flex items-center lg:flex-col">
                   <img
                     src={`https://openweathermap.org/img/wn/${weekday.weather.icon}@4x.png`}
                     className="h-20 object-cover"
-                  />
+                  />{" "}
+                  {weekday.weather.description}
                 </div>
               </CardContent>
               <CardFooter>
