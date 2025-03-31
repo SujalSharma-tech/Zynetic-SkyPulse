@@ -16,7 +16,6 @@ const CurrentWeather = ({
   };
 
   const hourlyData = forecastData.list.slice(0, 8);
-  console.log(hourlyData);
 
   function formatDate(date: Date) {
     return date.toLocaleDateString("en-US", {

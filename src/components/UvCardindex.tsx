@@ -7,15 +7,14 @@ const UVIndexCard = ({ data }: { data: WeatherData }) => {
     lat: data.coord.lat,
     lon: data.coord.lon,
   });
-  console.log(data);
-  console.log(pollution);
+
   const {
     pm2_5 = 0,
     so2 = 0,
     no2 = 0,
     o3 = 0,
   } = pollution?.data?.list?.[0]?.components || {};
-  console.log(pm2_5, so2, no2, o3);
+
 
   function getAirQualityText(daqi: number | undefined) {
     switch (daqi) {
