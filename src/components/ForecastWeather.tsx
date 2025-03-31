@@ -48,7 +48,7 @@ const ForecastWeather = ({ data }: { data: ForecastData }) => {
   const nextDays = Object.values(dailyData).splice(1, 6);
 
   return (
-    <div className="">
+    <div className="mt-5">
       <h2 className="text-3xl font-bold p-5 pt-0">5 Days Forecast</h2>
       <div className="flex gap-2  md:gap-3 flex-wrap ">
         {nextDays.map((weekday, indx) => {

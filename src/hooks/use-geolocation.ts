@@ -16,7 +16,7 @@ export function useGeolocationData() {
     })
 
     const getLocation = () => {
-        console.log("clicked")
+      
 
         setGeolocation((prev) => ({
             ...prev,

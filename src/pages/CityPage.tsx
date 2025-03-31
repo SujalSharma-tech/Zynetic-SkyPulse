@@ -63,8 +63,8 @@ export default function CityPage() {
           />
         </div>
         <div className="w-full md:w-[70%]">
-          <ForecastWeather data={forecastQuery.data} />
           <TodayHighlights data={weatherQuery.data} />
+          <ForecastWeather data={forecastQuery.data} />
         </div>
       </div>
     </div>

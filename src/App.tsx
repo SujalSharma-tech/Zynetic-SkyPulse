@@ -5,8 +5,9 @@ import { ThemeProvider } from "./context/theme-provider";
 import WeatherDashboard from "./pages/WeatherDashboard";
 import CityPage from "./pages/CityPage";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
-
+import Lenis from "lenis";
 import { Toaster } from "sonner";
+import { useEffect } from "react";
 function App() {
   const queryClient = new QueryClient({
     defaultOptions: {
@@ -18,6 +19,15 @@ function App() {
       },
     },
   });
+
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, []);
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
